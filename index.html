@@ -1,0 +1,196 @@
+<!-- правильная структура HTML документа -->
+<!-- при правильной структуре документа работает
+  автообноление для Live Server с помощью плагина Prettier -->
+<html> 
+    <!-- сам документ  -->
+    <head>
+    <!-- информация о документе, которая не отображается в браузере-->
+    <title>MAV CV</title>
+    <!-- Кодировка документа -->
+    <meta charset="UTF-8"> 
+    </head>
+    <body>
+    <!-- информация о документе, которая отображается в браузере-->
+    <h1>Алекмандр Мурзыков</h1>
+    <!-- новый формат подчеркивания текста -->
+    <p><em>Я шутник...</em></p>
+    <!-- новый формат жирного текста -->
+    <p><strong>Люблю программировать</strong></p>
+
+    <hr>
+    <h3>Списки и ссылки</h3>
+    <h2>Мои социальные сети</h2>
+
+     <h4>Список фигурами</h4>
+    <ul>
+        <li>Элемент списка - кругляшок</li>
+        <li>Сделали ссылку: <a href="https://telegram.com">https://telegram.com</a></li>
+        <li><a href="https://telegram.com">Ссылка в тексте</a></li>
+        <li>Ссылка с открытием в этом же окне<a href="https://telegram.com">https://telegram.com</a></li>
+        <!-- сделали ссылку с открытием в новом окне -->
+        <li><a href="https://telegram.com" target="_blank">Ссылка с открытием в новом окне</a></li>
+    </ul>
+
+    <ul type="square">
+        <li>Элемент списка - квадрат</li>
+        <li><a href="https://telegram.com">TELEGRAMM</a></li>
+    </ul>
+
+    <hr width="200" align="left"/>
+    <h4>Список цифрами</h4>
+
+    <h2>Мои хобби:</h2>
+    <ol>
+        <li>Качалка</li>
+        <li>Чтение</li>
+        <li>Путешествие</li>
+    </ol>
+
+    <ol type="I">
+        <li>Качалка</li>
+        <li>Путешествие</li>
+    </ol>
+
+    <hr>
+
+    <!-- многостраничные сайты -->
+    <h3>Многостраничные статичные сайты</h3>
+    <h2>Youtube курсы</h2>
+    <a href="youtube.html">Посмотреть список</a>
+
+    <hr>
+
+    <h3>Добавяем картинки</h3>
+    <ol>
+        <li><a href="picture.html">Через url </a></li>
+        <li>Через файл <img src="VVP.jpeg" width="200"> </li>
+    </ol>
+    <hr width="200" align="left"/>
+
+    <p>Проверка картинки на существование - ее нет -> пишем альтернативный текст</p>
+    <img src="!VVP.jpeg" alt="Тут ЕГО фотка">
+
+    <hr>
+
+    <h4>Работа с таблицами</h4>
+    <h2>Опыт работы</h2>
+
+    <table border="1"> <!-- стилизация будет уже в CSS -->
+        <tr>
+            <th>Заголовк 1</th>  <!---table header -->
+            <th>Заголовк 2</th>
+            <th>Заголовк 3</th>
+        </tr>
+        <tr> <!-- table row -->
+            <td>Ячейка 1,1</td> <!-- table data -->
+            <td>Ячейка 1,2</td>
+            <td>Ячейка 1,3</td>
+        </tr>
+        <tr>
+            <td>Ячейка 2,1</td> <!-- table data -->
+            <td>Ячейка 2,2</td>
+            <td>Ячейка 2,3</td>
+        </tr>
+        <tr>
+            <td>Ячейка 3,1</td> <!-- table data -->
+            <td>Ячейка 3,2</td>
+            <td>Ячейка 3,3</td>
+        </tr>
+    </table>
+
+    <p>Другой вариант построения таблицы</p>
+    <!-- или делаем таблицу так -->
+    <table border="1"> <!-- стилизация будет уже в CSS -->
+        <thead>
+            <thead>
+                <th>Заголовк 1</th>  <!---table header -->
+                <th>Заголовк 2</th>
+                <th>Заголовк 3</th>
+            </thead>
+        </thead>
+        <body>
+             <tr> <!-- table row -->
+            <td>Ячейка 1,1</td> <!-- table data -->
+            <td>Ячейка 1,2</td>
+            <td>Ячейка 1,3</td>
+        </tr>
+        <tr>
+            <td>Ячейка 2,1</td> <!-- table data -->
+            <td>Ячейка 2,2</td>
+            <td>Ячейка 2,3</td>
+        </tr>
+        <tr>
+            <td>Ячейка 3,1</td> <!-- table data -->
+            <td>Ячейка 3,2</td>
+            <td>Ячейка 3,3</td>
+        </tr>
+        </body>
+
+        <tfoot>
+            <tr>
+                <td> Какая то информация</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr width="200" align="left"/>
+    <h4>Делаем компановку страницы с помощью таблицы</h4>
+    <table cellspacing="12">
+        <tr>
+            <td>
+                <img src="VVP.jpeg" width="200">
+            </td>
+            <td>
+                <h1>Президент РФ</h1>
+                <h2>Владимир Владимирович</h2>
+                <h3>Верховный главнокомандующий</h3>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+    <h4>Работа с формами в HTML</h4>
+
+    <h2>Связаться со мной</h2>
+
+    <!-- в теге action указываем какой скрипт обрабатывает эту форму -->
+    <form action="/">
+        <!-- аттрибут for позволяет при клике по тексту перескачить в компонент где id="name" -->
+         <label for="name">Ваше имя:</label>
+        <!-- тип входных данных - type -->
+        <input type="text" id="name"
+         placeholder="Введите имя...">
+
+         <br>
+
+         <label for="email">Ваше Email:</label>
+        <input type="email" id="email"
+         placeholder="Введите email-адрес...">
+
+         <br>
+         <input type="number" name="" id="" value="1488">
+         <input type="password" name="" id="">
+
+         <br>
+         <input type="color" name="" id="">
+         <input type="date" name="" id="">
+         
+         <br>
+         <input type="range" name="" id="">
+         <input type="checkbox" name="" id="">
+         <br>
+         <input type="radio" name="" id="">
+         <br>
+         <br>
+         
+         <br>
+         <label for="text">Ваше сообщение:</label>
+         <br>
+        <textarea name="" id="text" rows="2" cols="5"></textarea>
+
+         <input type="submit" value="Связаться">
+
+    </form>
+
+    </body>
+</html>
